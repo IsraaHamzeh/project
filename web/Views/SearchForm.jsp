@@ -312,6 +312,10 @@
     </script>
 </head>
 <body>
+
+<div align="center">
+    <img src="/images/exp3.jpg" alt="Expedia inc">
+
 <form method="post" id="FSForm" action="Search">
 
     <hr/>
@@ -354,5 +358,6 @@
 
     <div><input type="submit" name="Submit" value="Submit" id="FSsubmit" /></div>
 </form>
+</div>
 </body>
 </html>

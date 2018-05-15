@@ -37,10 +37,6 @@ public class SearchController implements Controller {
             if (!_country.equals("-1"))
                 urlStr = urlStr + "&country=" + _country;
 
-            //   String destinationCity = (String) request.getParameter("destinationCity");
-            //  if(! destinationCity.equals("n"))
-            //       urlStr = urlStr+"&destinationCity="+destinationCity;
-
             String minTripStartDate = (String) request.getParameter("minTripStartDate");
             if (!minTripStartDate.equals(""))
                 urlStr = urlStr + "&minTripStartDate=" + minTripStartDate;
@@ -96,7 +92,7 @@ public class SearchController implements Controller {
 
                 org.json.JSONObject myResponse = new org.json.JSONObject(apiResponse.toString());
                 org.json.JSONObject offers = myResponse.getJSONObject("offers");
-                org.json.JSONArray jArr = (JSONArray) offers.getJSONArray("Hotel");
+                org.json.JSONArray jArr = offers.getJSONArray("Hotel");
                 int length = jArr.length();
                 List<HotelOfferModel> hotelDeals = new ArrayList<>();
 
@@ -134,19 +130,17 @@ public class SearchController implements Controller {
                 Double totalPriceValue;
                 Integer percentSavings;
                 boolean drr;
-                String hotelInfositeUrl;
-                String hotelSearchResultUrl;
-                JSONObject offer;
-                JSONObject offerDateRange;
-                JSONObject destination;
-                JSONObject hotelInfo;
-                JSONObject hotelPricingInfo;
-                JSONObject hotelUrls;
+                //String hotelInfositeUrl;
+                //String hotelSearchResultUrl;
+                //JSONObject destination;
+                //JSONObject hotelInfo;
+               // JSONObject hotelPricingInfo;
+               // JSONObject hotelUrls;
 
                 for (int i = 0; i < length; i++) {
                     HotelOfferModel deal = new HotelOfferModel();
-                    offer = jArr.getJSONObject(i);
-                    offerDateRange = offer.getJSONObject("offerDateRange");
+                    JSONObject offer = jArr.getJSONObject(i);
+                    JSONObject offerDateRange = offer.getJSONObject("offerDateRange");
                     if (offerDateRange.has("travelStartDate")) {
                         travelStartDate = offerDateRange.getJSONArray("travelStartDate");
                         deal.setTravelStartDate(travelStartDate);
@@ -160,7 +154,7 @@ public class SearchController implements Controller {
                         deal.setLengthOfStay(lengthOfStay);
                     }
 
-                    destination = offer.getJSONObject("destination");
+                    JSONObject destination = offer.getJSONObject("destination");
                     if (destination.has("regionID")) {
                         regionID = destination.getString("regionID");
                         deal.setRegionID(regionID);
@@ -191,7 +185,7 @@ public class SearchController implements Controller {
                     }
 
 
-                    hotelInfo = offer.getJSONObject("hotelInfo");
+                    JSONObject hotelInfo = offer.getJSONObject("hotelInfo");
                     if (hotelInfo.has("hotelCity")) {
                         hotelCity = hotelInfo.getString("hotelCity");
                         deal.setHotelCity(hotelCity);
@@ -257,7 +251,7 @@ public class SearchController implements Controller {
                         deal.setVipAccess(vipAccess);
                     }
 
-                    hotelPricingInfo = offer.getJSONObject("hotelPricingInfo");
+                    JSONObject hotelPricingInfo = offer.getJSONObject("hotelPricingInfo");
                     if (hotelPricingInfo.has("currency")) {
                         currency = hotelPricingInfo.getString("currency");
                         deal.setCurrency(currency);
@@ -287,18 +281,18 @@ public class SearchController implements Controller {
                         deal.setDrr(drr);
                     }
 
-                    hotelUrls = offer.getJSONObject("hotelUrls");
+                    JSONObject hotelUrls = offer.getJSONObject("hotelUrls");
                     if (hotelUrls.has(" hotelInfositeUrl")) {
-                        hotelInfositeUrl = hotelUrls.getString("hotelInfositeUrl");
+                        String hotelInfositeUrl = hotelUrls.getString("hotelInfositeUrl");
                         deal.setHotelInfositeUrl(hotelInfositeUrl);
                     }
                     if (hotelUrls.has("hotelSearchResultUrl")) {
-                        hotelSearchResultUrl = hotelUrls.getString("hotelSearchResultUrl");
+                        String hotelSearchResultUrl = hotelUrls.getString("hotelSearchResultUrl");
                         deal.setHotelSearchResultUrl(hotelSearchResultUrl);
                     }
 
                     hotelDeals.add(deal);
-                    System.out.println(deal.toString());
+                    //System.out.println(deal.toString());
                 }
 
                 request.setAttribute("hotelDeals", hotelDeals);

@@ -12,16 +12,20 @@
     <title>Hotel Deals</title>
 </head>
 <body>
-
+<div align="center">
+    <img src="/images/exp3.jpg" alt="Expedia inc">
+</div>
+</br>
+<div align="center">
 <c:forEach items="${requestScope.hotelDeals}" var="deal" varStatus="status">
     <img src="${deal.getHotelImageUrl()}" class="img-thumbnail center-block" alt="Blog Post Thumbnail">
     <p>${deal.getHotelName()} </p>
     <p>${deal.getHotelLongDestination()}</p>
+    <p>${deal.getOriginalPricePerNight()} ${deal.getCurrency()} Per Night</p>
 
 </c:forEach>
+    <input type="button" name="Search" value="Search" onclick="location.href='SearchForm.jsp';" class="submit_button" id="SSsubmit" /></div></div>
 
-<% request.setAttribute("country", null); %>
-
-
+</div>
 </body>
 </html>
