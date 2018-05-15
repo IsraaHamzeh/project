@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a78e8da-f544-4075-bb73-d8e95402f8dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HotelDeals_war_exploded/Views/SearchForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HotelDeals_war_exploded/Views/SearchForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HotelDeals_war_exploded/Views/ViewOffers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HotelDeals_war_exploded/Views/ViewOffers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HotelDeals_war_exploded/WEB-INF/classes/Controllers/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HotelDeals_war_exploded/WEB-INF/classes/Controllers/SearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HotelDeals/Controllers/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotelDeals/Controllers/SearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Views/SearchForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Views/SearchForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Views/ViewOffers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Views/ViewOffers.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="3a78e8da-f544-4075-bb73-d8e95402f8dc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -388,12 +379,12 @@
       <workItem from="1526286436565" duration="606000" />
       <workItem from="1526288487565" duration="881000" />
       <workItem from="1526326071424" duration="11139000" />
-      <workItem from="1526387478256" duration="10021000" />
+      <workItem from="1526387478256" duration="10538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24747000" />
+    <option name="totallyTimeSpent" value="25264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
@@ -740,7 +731,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
